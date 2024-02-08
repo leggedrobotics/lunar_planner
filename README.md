@@ -1,4 +1,4 @@
-# lunar_path_planner
+# lunar_planner
 
 This planner is developed by Julia Richter and part of the work "Multi-Objective Global Path Planning for Lunar Exploration with a Quadruped Robot".
 
