@@ -53,6 +53,7 @@ Thumbs.db
 
 # User related data
 /src/globalplanner/data/*
+
 /user_data/path_storage/*
 !/user_data/path_storage/example_aristarchus_imp
 !/user_data/path_storage/example_herodutus_mons
@@ -60,13 +61,16 @@ Thumbs.db
 /user_data/path_storage/example_herodutus_mons/*.pdf
 /user_data/path_storage/example_aristarchus_imp/*.xlsx
 /user_data/path_storage/example_aristarchus_imp/*.pdf
+
 /user_data/map_data/*
 !/user_data/map_data/Aristarchus_CP
 !/user_data/map_data/Aristarchus_IMP
 !/user_data/map_data/Herodutus_Mons
+
 /user_data/config_map/*
 !/user_data/config_map/aristarchus_cp.yaml
 !/user_data/config_map/aristarchus_imp.yaml
-!/user_data/config_map/herodutus_mons.yaml
+!/user_data/config_map/herodutus.yaml
+
 /user_data/config_robot/*
-!/user_data/config_robot/anymal.yaml
+!/user_data/config_robot/anymal.py

@@ -376,8 +376,8 @@ class PathCreatorPlugin(QtWidgets.QWidget):
 
         # Save which config files were used to create paths
         config_data = {
-            'map_file': self.map_file.split('lunar_path_planner_private/', 1)[-1],
-            'robot_file': self.robot_file.split('lunar_path_planner_private/', 1)[-1]
+            'map_file': self.map_file.split('lunar_planner/', 1)[-1],
+            'robot_file': self.robot_file.split('lunar_planner/', 1)[-1]
         }
         config_file_path = os.path.join(folder_name, 'config_files.yaml')
         with open(config_file_path, 'w') as config_file:
