@@ -10,7 +10,7 @@ Also the path export is currently under development.
 * `cd lunar_planner`
 * create virtual environment named `venv` with method of choice (e.g. in terminal `python3.8 -m venv env`)
 * `source env/bin/activate`
-* `pip install -r requirements.txt`
+* `pip install -r requirements.txt` (Error from PyYAML can be ignored)
 * `pip3 install -e .`
 
 # Download map
