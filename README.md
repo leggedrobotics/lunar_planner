@@ -11,6 +11,8 @@ This repo comes with examples for a quadruped robot and three different map loca
 
 **Documentation:** [Wiki](https://github.com/leggedrobotics/lunar_planner/wiki)
 
+![Visualization](images/viz.gif)
+
 ## Getting Started
 
 ### Installation

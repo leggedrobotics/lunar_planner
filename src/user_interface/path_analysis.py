@@ -75,7 +75,7 @@ class MyQtMainWindow(QtWidgets.QMainWindow):
         self.analysistable.setRowCount(4)
         self.analysistable.setColumnCount(13)
 
-        titles_tabel1 = ['','Weights','','','Relative energy','','Crash risk','','Scientific value','','Distance covered','# Paths in cluster','Custer var']
+        titles_tabel1 = ['','Weights','','','Relative energy','','Crash risk','','Scientific value','','Distance','# Paths in cluster','Cluster var']
         titles_tabel2 = ['','alpha','beta','gamma','[k(Nm)^2]','cmp to base','%','cmp to base','% of path','cmp to base','km','','']
         
         for i, title in enumerate(titles_tabel1):
@@ -176,6 +176,8 @@ class MyQtMainWindow(QtWidgets.QMainWindow):
                 self.current_map = -1
                 self.mapwidget.plot_layer_global(self.current_map)
                 self.pathplot.setSizePolicy(QSizePolicy.Expanding, QSizePolicy.Expanding)
+
+                self.getpathfolder.setEnabled(False)
 
 
     def extract_number(self, file_name):
@@ -422,7 +424,7 @@ class MyQtMainWindow(QtWidgets.QMainWindow):
 
         # Prepare weights and specs data
         weights_and_specs = {
-            'Specs': ['alpha', 'beta', 'gamma', 'Relative energy [k(Nm)^2]', 'Crash risk [%]', 'Scientific value [% of path]', 'Distance covered [m]'],
+            'Specs': ['alpha', 'beta', 'gamma', 'Relative energy [k(Nm)^2]', 'Crash risk [%]', 'Scientific value [% of path]', 'Distance [m]'],
             'Values': self.weights_of_paths[chosen_path_index+1] + self.specs_of_paths[chosen_path_index+1] + [] # first element is baseline
         }
         df_weights_and_specs = pd.DataFrame(weights_and_specs)

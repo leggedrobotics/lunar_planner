@@ -44,7 +44,7 @@ class MapWidget(QtWidgets.QWidget):
             add_path_to_four_layer_view_on_canvas   
     '''
     DEFAULT_CMAP = 'viridis'
-    FONTSIZE = 11
+    FONTSIZE = 15
 
     def __init__(self, width, height, extent, pixel_size, map_image, maps_array, \
                  layer_names, toolbar, plot_global):
@@ -84,6 +84,7 @@ class MapWidget(QtWidgets.QWidget):
         self.axis.set_title("Calculated paths")
         self.axis.set_xlabel(self.xlabel_global, fontsize=self.FONTSIZE)
         self.axis.set_ylabel(self.ylabel_global, fontsize=self.FONTSIZE)
+        self.axis.tick_params(axis='both', which='major', labelsize=self.FONTSIZE)
         self.xmin, self.ymin, self.xmax, self.ymax = extent
         self.extent_global = (self.xmin, self.xmax, self.ymin, self.ymax)
         self.aspect_ratio_global = abs(self.xmax-self.xmin) / abs(self.ymax-self.ymin) * \
@@ -93,6 +94,7 @@ class MapWidget(QtWidgets.QWidget):
         self.ylabel_local = 'y [m]'
         self.axis.set_xlabel(self.xlabel_local, fontsize=self.FONTSIZE)
         self.axis.set_ylabel(self.ylabel_local, fontsize=self.FONTSIZE)
+        self.axis.tick_params(axis='both', which='major', labelsize=self.FONTSIZE)
         self.extent_local = (0, width*pixel_size, 0, height*pixel_size)
         self.aspect_ratio_local = 'equal'
 
@@ -135,9 +137,9 @@ class MapWidget(QtWidgets.QWidget):
         # self.axis.yaxis.set_major_formatter(ticker.StrMethodFormatter('{x:.4f}'))
         self.axis.xaxis.set_major_locator(ticker.MaxNLocator(4))
         self.axis.yaxis.set_major_locator(ticker.MaxNLocator(5))
-        self.axis.tick_params(axis='both', which='major', labelsize=10)
+        self.axis.tick_params(axis='both', which='major', labelsize=self.FONTSIZE)
 
-        self.figure.tight_layout()
+        # self.figure.tight_layout()
         self.canvas.draw()
 
 
