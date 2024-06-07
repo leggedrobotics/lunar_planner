@@ -1,0 +1,2 @@
+map_file: user_data/config_map/herodutus.yaml
+robot_file: user_data/config_robot/anymal.py

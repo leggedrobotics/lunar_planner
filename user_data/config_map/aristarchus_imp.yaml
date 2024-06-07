@@ -1,0 +1,16 @@
+map_layers:
+  image:
+    - filename: 'user_data/map_data/Aristarchus_IMP/pic.png'
+  height:
+    - filename: 'user_data/map_data/Aristarchus_IMP/hsr.tif'
+      layer: 1
+  slope:
+    - filename: 'user_data/map_data/Aristarchus_IMP/hsr.tif'
+      layer: 2
+  rock_abundance:
+    - filename: 'user_data/map_data/Aristarchus_IMP/hsr.tif'
+      layer: 3
+  science:
+    - filename: 'user_data/map_data/Aristarchus_IMP/science_blurred.npy'
+  banned:
+    - filename: ''

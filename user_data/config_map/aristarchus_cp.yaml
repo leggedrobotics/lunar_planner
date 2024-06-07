@@ -1,0 +1,18 @@
+map_layers:
+  image:
+    - filename: 'user_data/map_data/Aristarchus_CP/pic.png'
+      layer: 1
+  height:
+    - filename: 'user_data/map_data/Aristarchus_CP/data.tif'
+      layer: 3
+  slope:
+    - filename: 'user_data/map_data/Aristarchus_CP/data.tif'
+      layer: 2
+  rock_abundance:
+    - filename: 'user_data/map_data/Aristarchus_CP/data.tif'
+      layer: 4
+  science:
+    - filename: 'user_data/map_data/Aristarchus_CP/data.tif'
+      layer: 5
+  banned:
+    - filename: ''
