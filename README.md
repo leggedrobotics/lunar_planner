@@ -15,6 +15,8 @@ This repo comes with examples for a quadruped robot and three different map loca
 
 ## Getting Started
 
+The planner is currently compatible with MacOS and Ubuntu.
+
 ### Installation
 
 To install the Lunar Planner, follow these steps:
