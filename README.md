@@ -38,6 +38,7 @@ In order to easily try this tool, you can directly download the executables with
 * Navigating to the repository: `cd lunar_planner`
 * Switching to branch with executables: `git checkout with_executables`
 * Download the executables from Git Large File Storage: `git lfs pull`
+* You will now find two files `PathCreator` and `PathAnalysis` in the main directory, which you can run by clicking on them. 
 
 ### Usage
 
