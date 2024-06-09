@@ -158,4 +158,4 @@ if __name__ == "__main__":
     map_size = (dataset.width, dataset.height)
 
     painter = Paint(map_size)
-    painter.draw_mask_and_save_to_file(input_image_path, output_npy_path, 7)
+    painter.draw_mask_and_save_to_file(input_image_path, output_npy_path, 4)
