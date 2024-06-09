@@ -81,6 +81,6 @@ PathCreator.spec
 hook-rasterio.py
 build/
 
-.gitattributes
-PathAnalysis
-PathCreator
+# .gitattributes
+# PathAnalysis
+# PathCreator
