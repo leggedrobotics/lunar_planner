@@ -30,7 +30,7 @@ To install the Lunar Planner with full functionality, follow these steps:
 * Installing dependencies: `pip install -r requirements.txt`
 * Installing the Lunar Planner package: `pip3 install -e .`
 
-#### Executables
+#### Executables (Ubuntu)
 
 In order to easily try this tool, you can directly download the executables with these steps:
 
