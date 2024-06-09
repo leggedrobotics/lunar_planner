@@ -44,7 +44,7 @@ class MapWidget(QtWidgets.QWidget):
             add_path_to_four_layer_view_on_canvas   
     '''
     DEFAULT_CMAP = 'viridis'
-    FONTSIZE = 15
+    FONTSIZE = 11
 
     def __init__(self, width, height, extent, pixel_size, map_image, maps_array, \
                  layer_names, toolbar, plot_global):

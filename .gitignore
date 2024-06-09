@@ -74,3 +74,13 @@ Thumbs.db
 
 /user_data/config_robot/*
 !/user_data/config_robot/anymal.py
+
+# Build data
+PathAnalysis.spec
+PathCreator.spec
+hook-rasterio.py
+build/
+
+.gitattributes
+PathAnalysis
+PathCreator

@@ -28,7 +28,7 @@ from mpl_toolkits.mplot3d import Axes3D
 
 
 class ClusterWidget(QWidget):
-    FONTSIZE = 15
+    FONTSIZE = 11
 
     def __init__(self):
         super().__init__()
