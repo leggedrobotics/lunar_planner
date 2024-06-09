@@ -58,7 +58,7 @@ In order to easily try this tool, you can directly download the executables with
 For more detailed information, please refer to our [wiki](https://github.com/leggedrobotics/lunar_planner/wiki), which includes:
 
 * [Downloading Map Data](https://github.com/leggedrobotics/lunar_planner/wiki/Downloading-Map-Data)
-* [Optional Scripts for Map Preprocessing](https://github.com/leggedrobotics/lunar_planner/wiki/Optional-Scripts-for-Map-Preprocessing)
+* [Scripts for Map Preprocessing (Optional)](https://github.com/leggedrobotics/lunar_planner/wiki/Scripts-for-Map-Preprocessing-(Optional))
 * [Adding Further Maps and Robot Files](https://github.com/leggedrobotics/lunar_planner/wiki/Adding-Further-Maps-and-Robot-Files)
 
 ## Citation
