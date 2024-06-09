@@ -17,9 +17,11 @@ This repo comes with examples for a quadruped robot and three different map loca
 
 The planner is currently compatible with MacOS and Ubuntu.
 
-### Installation
+### Installation 
 
-To install the Lunar Planner, follow these steps:
+#### Normal Installation
+
+To install the Lunar Planner with full functionality, follow these steps:
 
 * Cloning the repository: `git clone https://github.com/leggedrobotics/lunar_planner.git`
 * Navigating to the repository: `cd lunar_planner`
@@ -27,6 +29,16 @@ To install the Lunar Planner, follow these steps:
 * Activating the virtual environment: `source env/bin/activate`
 * Installing dependencies: `pip install -r requirements.txt`
 * Installing the Lunar Planner package: `pip3 install -e .`
+
+#### Executables
+
+In order to easily try this tool, you can directly download the executables with these steps:
+
+* Cloning the repository: `git clone https://github.com/leggedrobotics/lunar_planner.git`
+* Navigating to the repository: `cd lunar_planner`
+* Switching to branch with executables: `git checkout with_executables`
+* Download the executables from Git Large File Storage: `git lfs pull`
+* You will now find two files `PathCreator` and `PathAnalysis` in the main directory, which you can run by clicking on them. 
 
 ### Usage
 
