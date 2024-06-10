@@ -33,6 +33,8 @@ Thumbs.db
 # Applications
 *.app
 *.exe
+!PathAnalysis.exe
+!PathCreator.exe
 *.war
 
 # Large media files

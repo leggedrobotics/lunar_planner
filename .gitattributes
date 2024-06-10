@@ -1,2 +1,4 @@
 PathAnalysis filter=lfs diff=lfs merge=lfs -text
 PathCreator filter=lfs diff=lfs merge=lfs -text
+PathAnalysis.exe filter=lfs diff=lfs merge=lfs -text
+PathCreator.exe filter=lfs diff=lfs merge=lfs -text
