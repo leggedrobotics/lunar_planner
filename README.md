@@ -15,7 +15,7 @@ This repo comes with examples for a quadruped robot and three different map loca
 
 ## Getting Started
 
-The planner is easily compatible with Linux, MacOS and Windows. However, for Windows the binaries of GDAL need to be installed (The installation will give errors, but Chat GPT can help with this).
+The planner is currently compatible with MacOS and Ubuntu.
 
 ### Installation 
 
@@ -26,17 +26,17 @@ To install the Lunar Planner with full functionality, follow these steps:
 * Cloning the repository: `git clone https://github.com/leggedrobotics/lunar_planner.git`
 * Navigating to the repository: `cd lunar_planner`
 * Creating a virtual environment: `python3.8 -m venv env`
-* Activating the virtual environment: `source env/bin/activate` (Linux, MacOS) or `env/Scripts/Activate` (Windows)
+* Activating the virtual environment: `source env/bin/activate`
 * Installing dependencies: `pip install -r requirements.txt`
 * Installing the Lunar Planner package: `pip3 install -e .`
 
-#### Executables (Ubuntu, Windows)
+#### Executables (Ubuntu)
 
 In order to easily try this tool, you can directly download the executables with these steps:
 
 * Cloning the repository: `git clone https://github.com/leggedrobotics/lunar_planner.git`
 * Navigating to the repository: `cd lunar_planner`
-* Switching to branch with executables: `git checkout executables/ubuntu` or `git checkout executables/windows`
+* Switching to branch with executables: `git checkout with_executables`
 * Download the executables from Git Large File Storage: `pip install git-lfs && git lfs pull`
 * You will now find two files `PathCreator` and `PathAnalysis` in the main directory, which you can run by clicking on them. 
 
