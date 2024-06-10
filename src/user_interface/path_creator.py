@@ -364,7 +364,7 @@ class PathCreatorPlugin(QtWidgets.QWidget):
         c_values = np.logspace(0, 1, scale)
         n = len(list(product(a_values, b_values, c_values)))
 
-        print(scale, n)
+        # print(scale, n)
         
         # Define start and goal
         [start_sim, goal_sim] = transform.from_globe_to_map([start_global, goal_global], self.setup)
