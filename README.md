@@ -9,6 +9,8 @@ This repo comes with examples for a quadruped robot and three different map loca
 
 **Main Contact:** Julia Richter ([jurichter@ethz.ch](mailto:jurichter@ethz.ch?subject=[GitHub:LunarPlanner]))
 
+**Publication:** [Link](https://www.research-collection.ethz.ch/handle/20.500.11850/679580)
+
 **Documentation:** [Wiki](https://github.com/leggedrobotics/lunar_planner/wiki)
 
 <img src="images/viz.gif" alt="Visualization" width="700">
