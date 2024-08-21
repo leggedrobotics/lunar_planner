@@ -1,6 +1,8 @@
 from globalplanner import astar, transform, setup_file
 import matplotlib.pyplot as plt
 import numpy as np
+from datetime import datetime
+
 
 ### Input settings ###
 config_file = 'user_data/config_map/herodutus.yaml'
@@ -33,15 +35,18 @@ else:
 
 # Run A* algorithm
 path, stats = astar.astar(setup.map_size_in_pixel, start_pixel, goal_pixel, setup, allow_diagonal=True)
+path_globe = transform.from_pixel_to_globe(path, setup)
 
 if stats[0] != -1:
     # Save stats to file
     header = '\t\t'.join(('E_P', 'R_P', 'I_P', 'B_P', 'g_func', 'h_func'))
     stats_with_wp = np.vstack((stats, np.sum(stats, axis=0)))
-    np.savetxt('src/globalplanner/data/stats.dat', stats_with_wp, header=header, comments='', delimiter='\t', fmt='%-3f')
-
+    current_datetime = datetime.now().strftime("%Y-%m-%d_%H-%M-%S")
+    np.savetxt(f'user_data/path_storage/temp/stats_{current_datetime}.dat', stats_with_wp, header=header, comments='', delimiter='\t', fmt='%-3f')
+    
     # Print some stats
     results = np.sum(stats, axis=0)
+
     print('E, R, I:', results[0:3])
     E_star = results[0] * setup.Emax
     energy = E_star
@@ -63,10 +68,15 @@ if stats[0] != -1:
     print('The length of the path is ' + str(len(path) * setup.maps.pixel_size) + ' m.')
     print('')
 
+    # Save data in file in case more info is needed
+    column_names = np.array(['# Longitute', 'Latitude'])
+    wp_header = '\t'.join(['{:<10}'.format(name) for name in column_names])
+    np.savetxt(f'user_data/path_storage/temp/waypoints_{current_datetime}.dat', path_globe, \
+        header=header, comments='', delimiter='\t', fmt='%-3f')
+
     # Show the result
     ### Uncomment the following lines to visualize the map layers ###
     plt.close()
-    path_globe = transform.from_pixel_to_globe(path, setup)
     # setup.maps.plot_layers_with_path([1],[False],path_globe)
     # setup.maps.show_8plots_with_path(path_globe, path, [path_globe[0], path_globe[len(path_globe) - 1]])
     setup.maps.show_image_with_path(path_globe)
