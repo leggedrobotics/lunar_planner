@@ -53,10 +53,12 @@ Thumbs.db
 
 # User related data
 /src/globalplanner/data/*
+/user_data/path_storage/temp/*
 
 /user_data/path_storage/*
 !/user_data/path_storage/example_aristarchus_imp
 !/user_data/path_storage/example_herodutus_mons
+!/user_data/path_storage/temp
 /user_data/path_storage/example_herodutus_mons/*.xlsx
 /user_data/path_storage/example_herodutus_mons/*.pdf
 /user_data/path_storage/example_aristarchus_imp/*.xlsx
