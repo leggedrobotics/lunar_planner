@@ -27,6 +27,7 @@ from globalplanner import astar, transform, setup_file
 from user_interface.map_widget import MapWidget
 import os
 import pandas as pd
+from datetime import datetime
 
 
 class PathPlanningWidget(QtWidgets.QWidget):
@@ -330,15 +331,16 @@ class PathPlanningWidget(QtWidgets.QWidget):
             column_names = np.array(['# Longitute', 'Latitude', 'x in sim', 'y in sim', \
                                     'Row in arr', 'Col in arr'])
             wp_header = '\t'.join(['{:<10}'.format(name) for name in column_names])
-            np.savetxt('src/globalplanner/data/waypoints.dat', wp_all, \
-                    header=wp_header, comments='', delimiter='\t', fmt='%-3f')
             
+            current_datetime = datetime.now().strftime("%Y-%m-%d_%H-%M-%S")
+            np.savetxt(f'user_data/path_storage/temp/waypoints_{current_datetime}.dat', wp_all, \
+                    header=wp_header, comments='', delimiter='\t', fmt='%-3f')
             # Save the statistics into one .dat file
             path_coordinates = transform.from_pixel_to_globe(self.wp_pixel, self.setup)
             stats_header = '\t\t'.join(('LON', 'LAT', 'E_P', 'R_P', 'I_P', 'B_P', 'g_func', 'h_func'))
             stats_with_wp = np.hstack((path_coordinates[1:], np.array(self.stats)))
             stats_with_wp = np.vstack((stats_with_wp, np.sum(stats_with_wp, axis=0, where=[0,0,1,1,1,1,1,1])))
-            np.savetxt('src/globalplanner/data/stats.dat', stats_with_wp, \
+            np.savetxt(f'user_data/path_storage/temp/stats_{current_datetime}.dat', stats_with_wp, \
                     header=stats_header, comments='', delimiter='\t', fmt='%-3f')
         elif self.start:
             print("Please choose a goal by clicking on the map (right mouse button).")
