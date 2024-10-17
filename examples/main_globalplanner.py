@@ -68,6 +68,18 @@ if stats[0] != -1:
     print('The length of the path is ' + str(len(path) * setup.maps.pixel_size) + ' m.')
     print('')
 
+    height_list = []
+    for point in path:
+        height_list.append(setup.maps.maps_array[point[0], point[1],0])
+
+    # Plot the height list
+    plt.close()
+    plt.figure()
+    plt.plot(height_list, label='Height Profile')
+    plt.xlabel('Path Index')
+    plt.ylabel('Height')
+    plt.title('Height Profile Along the Path')
+
     # Save data in file in case more info is needed
     column_names = np.array(['# Longitute', 'Latitude'])
     wp_header = '\t'.join(['{:<10}'.format(name) for name in column_names])
@@ -76,7 +88,5 @@ if stats[0] != -1:
 
     # Show the result
     ### Uncomment the following lines to visualize the map layers ###
-    plt.close()
-    # setup.maps.plot_layers_with_path([1],[False],path_globe)
-    # setup.maps.show_8plots_with_path(path_globe, path, [path_globe[0], path_globe[len(path_globe) - 1]])
-    setup.maps.show_image_with_path(path_globe)
+    setup.maps.show_8plots_with_path(path_globe, path, [path_globe[0], path_globe[len(path_globe) - 1]])
+    # setup.maps.show_image_with_path(path_globe)
