@@ -488,11 +488,12 @@ class PathPlanningWidget(QtWidgets.QWidget):
 
         # Save coordinates to an Excel file
         waypoints = []
-        for i, (global_coord, sim_coord) in enumerate(zip(self.wp_global, self.wp_sim)):
-            waypoints.append([i+1, global_coord[0], global_coord[1], sim_coord[0], sim_coord[1]])
+        for i, (global_coord, sim_coord, pixel_coord) in enumerate(zip(self.wp_global, self.wp_sim, self.wp_pixel)):
+            height = self.setup.maps.maps_array[pixel_coord[0], pixel_coord[1],0]
+            waypoints.append([i+1, global_coord[0], global_coord[1], sim_coord[0], sim_coord[1], height])
 
         # Create panda data frame
-        df_waypoints = pd.DataFrame(waypoints, columns=['Waypoint Nr.', 'LON [deg]', 'LAT [deg]', 'x [m]', 'y [m]'])
+        df_waypoints = pd.DataFrame(waypoints, columns=['Waypoint Nr.', 'LON [deg]', 'LAT [deg]', 'x [m]', 'y [m]', 'Height [m]'])
 
         # Prepare weights and specs data
         weights_and_specs = {
